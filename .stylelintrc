@@ -1,0 +1,10 @@
+{
+  "rules": {
+    "block-no-empty": null,
+    "declaration-colon-space-after": "always",
+    "indentation": ["tab", {
+      "except": ["value"]
+    }],
+    "unit-whitelist": ["px", "vh", "deg", "em", "rem", "%", "s"]
+  }
+}
