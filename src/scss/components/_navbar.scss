@@ -1,0 +1,180 @@
+//colors
+$black_60: rgba($color-black-d, .6);
+$black_20: rgba($color-black-d, .2);
+
+//urls
+$url_0: url(https://unsplash.it/2000/800?image=563);
+
+.navbar {
+	margin-bottom: 20px;
+	min-height: 50px;
+	position: relative;
+	transition: $base-duration;
+}
+
+.navbar-brand {
+	float: left;
+	max-height: 60px;
+	padding-left: 1em;
+	padding-right: 2em;
+
+	.cls-1 {
+		fill: $color-red !important;
+	}
+
+	svg {
+		@include size(80%, 60px);
+		transition: $base-duration;
+
+		path {
+			fill: $color-white;
+			transition: $base-duration;
+		}
+	}
+}
+
+.navbar--size--lg {
+	@include padding($base-spacing null);
+}
+
+.navbar--size--sm {
+	@include padding($small-spacing null);
+}
+
+.navbar--color--secondary {
+	background: $color-black;
+}
+
+.navbar--color--ghost {
+	// background: $black_20;
+	background: transparent;
+
+	svg {
+		height: 60px;
+		width: 100%;
+
+		path {
+			fill: $color-black-d;
+		}
+	}
+
+	.nav-link a {
+		color: $color-red-l;
+	}
+}
+
+.navbar-fixed-top {
+	@include position(fixed, 0 0 null 0);
+	z-index: 1030;
+}
+
+.navbar-nav {
+	min-height: 60px;
+	z-index: 9999999;
+
+	@media screen and (min-width: 53.75em) {
+		float: right;
+	}
+
+	ul {
+		clear: both;
+		display: none;
+		margin: 0 auto;
+		overflow: visible;
+		padding: 0;
+		width: 100%;
+		z-index: 9999;
+
+		@media screen and (min-width: 53.75em) {
+			display: inline;
+			margin: 0;
+		}
+
+		li {
+			background: $color-black-l;
+			display: block;
+			line-height: 60px;
+			overflow: hidden;
+			padding-right: $base-spacing;
+			text-align: right;
+			width: 100%;
+			z-index: 9999;
+
+			@media screen and (min-width: 53.75em) {
+				background: transparent;
+				display: inline;
+				line-height: 60px;
+				text-decoration: none;
+				width: auto;
+			}
+
+			a {
+				color: rgba($color-white, .85);
+				display: inline-block;
+
+				&:hover {
+					color: $color-red-l;
+				}
+			}
+		}
+	}
+}
+
+.hero {
+	// background: $url_0 center top/cover no-repeat;
+	height: 80vh;
+	min-height: 600px;
+	position: relative;
+
+	&::before {
+		@include position(absolute, 0 null null 0);
+		@include size(100%);
+		background: rgba(34, 34, 34, .4);
+		content: '';
+	}
+}
+
+.overlay {
+	@include position(absolute, 0 null null 0);
+	@include size(100%);
+	background: $black_60;
+	z-index: -1;
+}
+
+
+
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+	@include position(fixed, 50% null null 50%);
+	height: auto;
+	min-height: 100%;
+	min-width: 100%;
+	transform: translate(-50%, -50%);
+	width: auto;
+	z-index: -100;
+}
+
+.home-content {
+	@include size(100%);
+	display: table;
+	text-align: center;
+	position: relative;
+}
+
+.home-text {
+	display: table-cell;
+	height: 100%;
+	vertical-align: middle;
+
+	svg {
+		height: 150px;
+		margin-bottom: $base-spacing * 2;
+	}
+}
+
+.hs-line-8 {
+	color: $color-black;
+	letter-spacing: 0.25em;
+	text-transform: uppercase;
+}
