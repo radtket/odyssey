@@ -1,0 +1,104 @@
+.contact {
+	overflow: hidden;
+}
+
+.contact-section__copy {
+	@include span-columns(4);
+	position: relative;
+
+	p {
+		font-size: 20px;
+	}
+
+	&::before {
+		@include position(absolute, null null -50% -25%);
+		@include size(125%, 100%);
+		background-image: url('../logo-primary.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+		content: '';
+		display: block;
+		opacity: .3;
+	}
+}
+
+.contact-section__form {
+	@include span-columns(8);
+
+	span {
+		color: $color-black-l;
+		font-size: 12px;
+		font-weight: 300;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+}
+
+.form-item {
+	margin-bottom: 24px;
+
+	&__half {
+		@include span-columns(4 of 8);
+	}
+
+	&__full {
+		@include span-columns(8 of 8);
+	}
+}
+
+input[type=text],
+input[type=email] {
+	// @include margin(10px null);
+	@include padding(0 0 0 10px);
+	@include size(100%, 40px);
+	@include border-width(0 0 1px);
+	background: transparent;
+	border-bottom-color: $medium-gray;
+	color: $color-black-l;
+	font-size: 12px;
+	font-weight: 300;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.checkbox-inline {
+	line-height: 1;
+
+	li {
+		cursor: pointer;
+		display: inline-block;
+		margin-right: $base-spacing;
+		vertical-align: middle;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		> * {
+			vertical-align: middle;
+		}
+
+		label {
+			display: inline;
+			margin: 0;
+		}
+	}
+}
+
+textarea {
+	@include size(100%, 160px);
+	@include padding(10px);
+	background: transparent;
+	border: 1px solid $medium-gray;
+	color: $color-black-l;
+	font-size: 12px;
+	font-weight: 300;
+	letter-spacing: 1px;
+	margin-top: $base-spacing;
+	text-transform: uppercase;
+}
+
+.btn-submit {
+	display: block;
+	width: 100%;
+}

@@ -31,16 +31,16 @@ textarea {
 
 // #{$all-text-inputs}
 input {
-	appearance: none;
-	background-color: $_form-background-color;
-	border: $base-border;
-	border-radius: $base-border-radius;
-	box-shadow: $_form-box-shadow;
-	box-sizing: border-box;
-	margin-bottom: $small-spacing;
-	padding: $base-spacing / 3;
-	transition: border-color $base-duration $base-timing;
-	width: 100%;
+	// appearance: none;
+	// background-color: $_form-background-color;
+	// border: $base-border;
+	// border-radius: $base-border-radius;
+	// box-shadow: $_form-box-shadow;
+	// box-sizing: border-box;
+	// margin-bottom: $small-spacing;
+	// padding: $base-spacing / 3;
+	// transition: border-color $base-duration $base-timing;
+	// width: 100%;
 
 	&:hover {
 		border-color: shade($base-border-color, 20%);

@@ -1,0 +1,31 @@
+.team {
+	.headline-w-sub {
+		margin-bottom: 64px;
+
+		span {
+			color: $color-red-l;
+			font-weight: 400;
+			letter-spacing: 1px;
+		}
+	}
+
+	&-member {
+		@include span-columns(4);
+		text-align: center;
+
+		> img {
+			margin-bottom: 16px;
+			max-width: 325px;
+		}
+
+		&__name {
+			font-size: 24px !important;
+			font-weight: 500;
+		}
+
+		&__title {
+			font-size: 16px !important;
+		}
+	}
+}
+

@@ -1,0 +1,51 @@
+.event-copy {
+	@include span-columns(4);
+
+	.btn {
+		margin-top: 42px;
+	}
+}
+
+.event-cards {
+	@include span-columns(8);
+}
+
+.card {
+	background-color: $color-white;
+	box-shadow: 0 1px 3px 1px rgba($color-black-d, .1), 0 5px 5px 0 rgba($color-black-d, .1);
+	position: relative;
+	transition: .5s;
+	// width: 370px;
+	@include span-columns(4 of 8);
+
+	img {
+		display: block;
+		height: auto;
+		margin: 0 auto;
+		max-width: 100%;
+	}
+
+	&-content {
+		padding: 32px 24px;
+	}
+
+	&-title {
+		margin-bottom: 24px;
+
+		h4 {
+			color: $color-red;
+			font-size: 24px;
+			margin-bottom: 0;
+		}
+
+		span {
+			color: #666666;
+			font-size: 14px;
+		}
+	}
+
+	p {
+		color: $color-black;
+		font-size: 18px;
+	}
+}

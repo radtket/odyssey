@@ -1,0 +1,65 @@
+.footer {
+	padding: 16px 0;
+
+	&-nav {
+		float: left;
+	}
+
+	&-social {
+		float: right;
+		font-size: 0;
+		line-height: 1;
+
+		a {
+			height: 36px;
+			line-height: 36px;
+
+			&:hover {
+				svg {
+					fill: $color-red-l;
+				}
+			}
+		}
+
+		svg {
+			fill: $color-white;
+			height: 100%;
+			max-width: 100%;
+			transition: all .27s cubic-bezier(.3, .1, .580, 1);
+		}
+	}
+
+	h6 {
+		font-size: 16px;
+		font-weight: 500;
+	}
+
+	p {
+		color: $color-white;
+	}
+
+	a {
+		color: rgba($color-white, .85);
+
+		&:hover {
+			color: $color-red-l;
+		}
+	}
+
+	p,
+	a {
+		@include margin(null 16px 0 null);
+		display: inline-block;
+		font-size: 12px;
+	}
+
+	nav {
+		display: inline-block;
+
+		a:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+
