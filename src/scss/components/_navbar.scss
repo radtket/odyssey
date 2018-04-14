@@ -10,6 +10,7 @@ $url_0: url(https://unsplash.it/2000/800?image=563);
 	min-height: 50px;
 	position: relative;
 	transition: $base-duration;
+	box-shadow: 0 1px 10px rgba(0, 0, 0, 0), 0 1px 0 rgba(0, 0, 0, 0);
 }
 
 .navbar-brand {
@@ -43,6 +44,7 @@ $url_0: url(https://unsplash.it/2000/800?image=563);
 
 .navbar--color--secondary {
 	background: $color-black;
+	box-shadow: 0 1px 10px rgba(0, 0, 0, .1), 0 1px 0 rgba(0, 0, 0, .027);
 }
 
 .navbar--color--ghost {
@@ -59,7 +61,7 @@ $url_0: url(https://unsplash.it/2000/800?image=563);
 	}
 
 	.nav-link a {
-		color: $color-red-l;
+		color: $color-black;
 	}
 }
 
@@ -129,7 +131,7 @@ $url_0: url(https://unsplash.it/2000/800?image=563);
 	&::before {
 		@include position(absolute, 0 null null 0);
 		@include size(100%);
-		background: rgba(34, 34, 34, .4);
+		background: rgba($color-white, .1);
 		content: '';
 	}
 }
@@ -165,10 +167,12 @@ $url_0: url(https://unsplash.it/2000/800?image=563);
 .home-text {
 	display: table-cell;
 	height: 100%;
+	width: 100%;
 	vertical-align: middle;
 
 	svg {
-		height: 150px;
+		margin: 0 $small-spacing;
+		max-height: 150px;
 		margin-bottom: $base-spacing * 2;
 	}
 }
@@ -178,3 +182,4 @@ $url_0: url(https://unsplash.it/2000/800?image=563);
 	letter-spacing: 0.25em;
 	text-transform: uppercase;
 }
+

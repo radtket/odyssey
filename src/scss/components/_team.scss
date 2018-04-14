@@ -10,12 +10,17 @@
 	}
 
 	&-member {
-		@include span-columns(4);
 		text-align: center;
+		margin-bottom: $base-spacing * 2;
+		@media only screen and (min-width: 768px) {
+			@include span-columns(4);
+			margin-bottom: 0;
+		}
 
 		> img {
-			margin-bottom: 16px;
-			max-width: 325px;
+			width: 325px;
+			max-width: 100%;
+			height: auto;
 		}
 
 		&__name {

@@ -1,14 +1,25 @@
 .footer {
 	padding: 16px 0;
+	text-align: center;
+
+	@media only screen and (min-width: 600px) {
+		text-align: left;
+	}
 
 	&-nav {
-		float: left;
+		margin-bottom: $small-spacing;
+		@media only screen and (min-width: 600px) {
+			float: left;
+			margin-bottom: 0;
+		}
 	}
 
 	&-social {
-		float: right;
 		font-size: 0;
 		line-height: 1;
+		@media only screen and (min-width: 600px) {
+			float: right;
+		}
 
 		a {
 			height: 36px;
@@ -32,6 +43,7 @@
 	h6 {
 		font-size: 16px;
 		font-weight: 500;
+		color: $color-white;
 	}
 
 	p {

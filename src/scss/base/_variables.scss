@@ -30,7 +30,7 @@ $color-black: #212121;
 $color-black-d: #000;
 
 // Font Colors
-$base-font-color: $dark-gray;
+$base-font-color: $color-black-l;
 $action-color: $color-red;
 
 
@@ -48,5 +48,5 @@ $focus-outline: $focus-outline-width solid $focus-outline-color;
 $focus-outline-offset: 2px;
 
 // Animations
-$base-duration: 150ms;
+$base-duration: .15s;
 $base-timing: ease;

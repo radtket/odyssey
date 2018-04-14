@@ -15,6 +15,7 @@ h6 {
 	font-size: modular-scale(1);
 	line-height: $heading-line-height;
 	margin: 0 0 $small-spacing;
+	color: $color-black;
 }
 
 h2 {
@@ -63,11 +64,19 @@ hr {
 	margin: $base-spacing 0;
 }
 
-
 .headline-w-sub {
 	margin-bottom: 42px;
 
 	> * {
 		margin-bottom: 0;
 	}
+}
+
+.primary-headline__sub {
+	font-weight: 400 !important;
+}
+
+.lead {
+	font-size: modular-scale(1);
+	font-weight: 300;
 }

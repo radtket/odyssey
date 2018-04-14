@@ -18,12 +18,44 @@ body {
 	margin: 0;
 }
 
-.page-section {
-	@include padding(110px null);
+.mobile .page-section,
+.mobile .home-section,
+.mobile .small-section{
+	background-attachment: scroll;
 }
+
+.page-section {
+	@include padding(60px null);
+	background-attachment: fixed;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: block;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+
+	@media only screen and (min-width: 480px) {
+		@include padding(80px null);
+	}
+
+	@media only screen and (min-width: 768px) {
+		@include padding(100px null);
+	}
+
+	@media only screen and (min-width: 1024px) {
+		@include padding(120px null);
+		background-attachment: scroll;
+	}
+
+}
+
+
+
 
 .container {
 	@include outer-container;
+	@include padding(null $base-spacing);
 	&__flex {
 		display: flex;
 	}
@@ -43,7 +75,6 @@ body {
 	background-color: $color-red;
 }
 
-
 .bg-black {
 	background-color: $color-black;
 }
@@ -51,7 +82,6 @@ body {
 .bg-white {
 	background-color: #fff;
 }
-
 
 .bg-black,
 .bg-red {
@@ -72,19 +102,23 @@ body {
 	}
 }
 
-
-
-
 .pillar-wrap {
-	@include span-columns(4);
+	// @include span-columns(6);
+	@include clearfix;
 	margin-bottom: 42px;
 
-	&__middle {
-		@include shift(4);
+	@media only screen and (min-width: 850px) {
+		@include span-columns(6);
 	}
 
-	&__right {
-		@include shift(8);
+	@media only screen and (min-width: 850px) {
+		&__middle {
+			@include shift(3);
+		}
+
+		&__right {
+			@include shift(6);
+		}
 	}
 }
 
@@ -92,4 +126,47 @@ body {
 	color: $color-black-d;
 	font-weight: 900;
 	text-transform: uppercase;
+}
+
+.pillar-media {
+	width: 110px;
+	text-align: center;
+	float: left;
+	margin-right: $small-spacing;
+	// @include span-columns(2 of 6);
+	h3 {
+		color: rgba($color-black, .20);
+		font-size: 72px;
+		line-height: 72px;
+		margin-bottom: 6px;
+		font-weight: 900;
+	}
+
+	svg {
+		width: 80%;
+		fill: $color-black;
+	}
+}
+
+.pillar-copy {
+	@include span-columns(4 of 6);
+}
+
+.pillar-section {
+	position: relative;
+	overflow: hidden;
+
+	&::before {
+		position: absolute;
+		top: -3%;
+		right: -3%;
+		height: 100%;
+		width: 50%;
+		background-image: url(../assets/branding/logo-primary.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		content: '';
+		display: block;
+		opacity: .3;
+	}
 }
