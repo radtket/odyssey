@@ -135,3 +135,34 @@ $(document).ready(() => {
 $(window).resize(() => {
   splitSection();
 });
+
+$(document).ready(() => {
+  if ($('#js-parallax-window').length) {
+    parallax();
+  }
+});
+
+$(window).scroll(e => {
+  if ($('#js-parallax-window').length) {
+    parallax();
+  }
+});
+
+function parallax() {
+  if ($('#js-parallax-window').length > 0) {
+    const plxBackground = $('#js-parallax-background');
+    const plxWindow = $('#js-parallax-window');
+
+    const plxWindowTopToPageTop = $(plxWindow).offset().top;
+    const windowTopToPageTop = $(window).scrollTop();
+    const plxWindowTopToWindowTop = plxWindowTopToPageTop - windowTopToPageTop;
+
+    const plxBackgroundTopToPageTop = $(plxBackground).offset().top;
+    const windowInnerHeight = window.innerHeight;
+    const plxBackgroundTopToWindowTop = plxBackgroundTopToPageTop - windowTopToPageTop;
+    const plxBackgroundTopToWindowBottom = windowInnerHeight - plxBackgroundTopToWindowTop;
+    const plxSpeed = 0.35;
+
+    plxBackground.css('top', `${-(plxWindowTopToWindowTop * plxSpeed)}px`);
+  }
+}

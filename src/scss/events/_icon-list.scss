@@ -1,0 +1,30 @@
+.icon-list {
+	list-style-type: none;
+	padding: 25px 0 15px;
+
+	li {
+		font-size: 18px;
+		font-weight: 500;
+		margin-bottom: 1rem;
+		padding-left: 2.25rem;
+		position: relative;
+
+		&::before {
+			@include size(1.25rem);
+			@include position(absolute, 14px null null 0);
+			background-image: url('../assets/golfclassic/checkmark.png');
+			background-size: contain;
+			border-radius: $base-border-radius;
+			content: '';
+			display: block;
+			transform: translateY(-50%);
+			z-index: 2;
+		}
+
+
+		small {
+			color: $color-black-l;
+			display: block;
+		}
+	}
+}

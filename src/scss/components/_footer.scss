@@ -1,6 +1,7 @@
 .footer {
 	padding: 16px 0;
 	text-align: center;
+	position: relative;
 
 	@media only screen and (min-width: 600px) {
 		text-align: left;
@@ -8,6 +9,7 @@
 
 	&-nav {
 		margin-bottom: $small-spacing;
+
 		@media only screen and (min-width: 600px) {
 			float: left;
 			margin-bottom: 0;
@@ -17,6 +19,7 @@
 	&-social {
 		font-size: 0;
 		line-height: 1;
+
 		@media only screen and (min-width: 600px) {
 			float: right;
 		}
@@ -41,9 +44,9 @@
 	}
 
 	h6 {
+		color: $color-white;
 		font-size: 16px;
 		font-weight: 500;
-		color: $color-white;
 	}
 
 	p {

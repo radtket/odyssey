@@ -1,0 +1,65 @@
+.gdg-countdown {
+	@include outer-container(1000px);
+
+	&__item {
+		background: $color-black;
+		min-height: 135px;
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+
+		@media (min-width: 900px) {
+			min-height: 200px;
+		}
+
+		span {
+			color: $color-tiffany;
+			display: block;
+			font-size: 90px;
+			font-weight: bold;
+			line-height: 1;
+			position: absolute;
+			text-transform: uppercase;
+
+			// @media (max-width: 767px) {
+			// 	font-size: 35px;
+			// 	line-height: 35px;
+			// }
+
+			&:first-child {
+				font-size: 24px;
+				left: 10px;
+				line-height: 1;
+				top: 10px;
+
+				// @media (max-width: 767px) {
+				// 	font-size: 12px;
+				// 	line-height: 12px;
+				// }
+			}
+
+			&:last-child {
+				bottom: -20px;
+				right: -15px;
+
+				// @media (max-width: 767px) {
+				// 	bottom: -10px;
+				// 	right: -5px;
+				// }
+			}
+		}
+
+		&--wrap {
+			@include span-columns(3);
+
+			@media (max-width: 568px) {
+				@include span-columns(6);
+				@include omega(2n);
+				margin-bottom: 2.35765%;
+			}
+		}
+	}
+}
+
+
+

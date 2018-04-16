@@ -20,7 +20,7 @@ body {
 
 .mobile .page-section,
 .mobile .home-section,
-.mobile .small-section{
+.mobile .small-section {
 	background-attachment: scroll;
 }
 
@@ -34,6 +34,7 @@ body {
 	overflow: hidden;
 	position: relative;
 	width: 100%;
+	z-index: 0;
 
 	@media only screen and (min-width: 480px) {
 		@include padding(80px null);
@@ -47,15 +48,12 @@ body {
 		@include padding(120px null);
 		background-attachment: scroll;
 	}
-
 }
-
-
-
 
 .container {
 	@include outer-container;
 	@include padding(null $base-spacing);
+
 	&__flex {
 		display: flex;
 	}
@@ -91,6 +89,24 @@ body {
 	h3,
 	h4 {
 		color: $color-white;
+		font-weight: 500;
+	}
+
+	p {
+		// font-size: 20px;
+		font-size: modular-scale(1);
+		font-weight: 300;
+		line-height: 1.6;
+	}
+}
+
+.bg-white {
+	color: rgba($color-black, .85);
+
+	h2,
+	h3,
+	h4 {
+		color: $color-black;
 		font-weight: 500;
 	}
 
@@ -170,3 +186,4 @@ body {
 		opacity: .3;
 	}
 }
+
