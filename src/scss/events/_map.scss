@@ -1,0 +1,112 @@
+
+//colors
+$white: #fff;
+
+.google-map {
+	background: $color-black;
+	position: relative;
+}
+
+#map-canvas {
+	background-color: $color-black;
+	height: 500px;
+	position: relative;
+	z-index: 1;
+
+	@media only screen and (max-width: 768px) {
+		height: 350px;
+	}
+}
+
+.gm-style-cc {
+	display: none !important;
+}
+
+.map-section {
+	@include size(100%);
+	@include position(absolute, null null 0 0);
+	background: rgba($color-tiffany, .93);
+	cursor: pointer;
+	padding: 0;
+	transition: all .27s cubic-bezier(.300, .100, .580, 1);
+	z-index: 2;
+
+	&:hover {
+		background: rgba($color-tiffany, .9);
+	}
+
+	&.js-active {
+		background: rgba($color-tiffany, .75);
+		height: 50px;
+
+		&:hover {
+			background: rgba($color-tiffany, .85);
+		}
+
+		.mt-icon {
+			opacity: 0;
+		}
+
+		.mt-text {
+			position: relative;
+			top: -20px;
+		}
+	}
+}
+
+.map-toggle {
+	@include size(200px, 100px);
+	@include position(absolute, 50% null null 50%);
+	@include margin(-50px 0 0 -100px);
+	color: $color-black;
+	text-align: center;
+}
+
+.mt-icon {
+	@include size(27px);
+	color: $color-black;
+	line-height: 27px;
+	margin: 6px auto 25px;
+	position: relative;
+	transition: all .27s cubic-bezier(.300, .100, .580, 1);
+
+	&::before {
+		@include size(100%);
+		@include position(absolute, 0 null null 0);
+		background: $color-black;
+		border-radius: 2px;
+		content: '';
+		display: block;
+		transform: rotate(45deg);
+	}
+
+	svg {
+		fill: $color-white;
+		height: 1rem;
+		position: relative;
+	}
+
+	span {
+		position: relative;
+	}
+}
+
+.mt-text {
+	color: rgba($color-black, 75);
+	font-size: 16px;
+	letter-spacing: .3em;
+	margin-left: 12px;
+	text-transform: uppercase;
+
+	> * {
+		position: relative;
+	}
+}
+
+.mt-close {
+	display: none;
+}
+
+.gm-style-iw div {
+	color: $medium-gray;
+}

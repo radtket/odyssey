@@ -80,7 +80,6 @@ $color-tiffany: #5bd8b4;
 	}
 }
 
-
 .ticket-sec__copy {
 	margin: auto;
 	margin-bottom: 60px;
@@ -93,9 +92,9 @@ $color-tiffany: #5bd8b4;
 }
 
 .ticket-sec__ticket {
-	width: 535px;
-	max-width: 100%;
 	margin: auto;
+	max-width: 100%;
+	width: 535px;
 
 	@media (min-width: 991px) {
 		@include span-columns(6);
@@ -140,3 +139,33 @@ $color-tiffany: #5bd8b4;
 		fill: $color-black;
 	}
 }
+
+.half {
+	@media (min-width: 867px) {
+		@include span-columns(6);
+	}
+
+	li {
+		color: $color-white;
+		font-size: 1.25em;
+		margin-bottom: 1rem;
+		margin-left: 2.25em;
+		position: relative;
+
+		&::before {
+			@include position(absolute, .75em null null -2.25em);
+			background: $color-tiffany;
+			content: '';
+			display: block;
+			height: 2px;
+			width: 1.5em;
+		}
+
+		small {
+			color: rgba($color-white, .85);
+			display: block;
+		}
+	}
+}
+
+
