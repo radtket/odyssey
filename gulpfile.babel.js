@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync');
 const sass = require('gulp-sass');
+const copy = require('gulp-copy');
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
@@ -44,6 +45,10 @@ gulp.task('serve', ['sass'], () => {
 
   gulp.watch([config.htmlin, config.jsin], ['reload']);
   gulp.watch(config.scssin, ['sass']);
+});
+
+gulp.task('copy', () => {
+  gulp.src('src/assets/**/*').pipe(gulp.dest(config.imgout));
 });
 
 gulp.task('sass', () =>
@@ -112,7 +117,7 @@ gulp.task('html', () =>
 gulp.task('clean', () => del([config.dist]));
 
 gulp.task('build', () => {
-  sequence('clean', ['html', 'js', 'css', 'img']);
+  sequence('clean', ['html', 'js', 'css', 'copy', 'img']);
 });
 
 gulp.task('default', ['serve']);
