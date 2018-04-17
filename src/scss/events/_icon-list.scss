@@ -12,7 +12,7 @@
 		&::before {
 			@include size(1.25rem);
 			@include position(absolute, 14px null null 0);
-			background-image: url('../assets/golfclassic/checkmark.png');
+			background-image: url('../assets/GameDayGolfClassic/checkmark.png');
 			background-size: contain;
 			border-radius: $base-border-radius;
 			content: '';

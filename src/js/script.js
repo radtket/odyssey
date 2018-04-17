@@ -120,33 +120,19 @@ function splitSection() {
   }
 }
 
-$(window).load(() => {
-  // Page loader
-
-  $(window).trigger('scroll');
-  $(window).trigger('resize');
-});
-
-$(document).ready(() => {
-  $(window).trigger('resize');
-  initNav();
-});
-
-$(window).resize(() => {
-  splitSection();
-});
-
-$(document).ready(() => {
-  if ($('#js-parallax-window').length) {
-    parallax();
-  }
-});
-
-$(window).scroll(e => {
-  if ($('#js-parallax-window').length) {
-    parallax();
-  }
-});
+function initHeightMatch() {
+  (function($) {
+    $('.js-height-full').height($(window).height());
+    $('.js-height-parent').each(function() {
+      $(this).height(
+        $(this)
+          .parent()
+          .first()
+          .height()
+      );
+    });
+  })(jQuery);
+}
 
 function parallax() {
   if ($('#js-parallax-window').length > 0) {
@@ -165,6 +151,33 @@ function parallax() {
 
     plxBackground.css('top', `${-(plxWindowTopToWindowTop * plxSpeed)}px`);
   }
+}
+
+function initCountdown() {
+  const second = 1000;
+  const minute = second * 60;
+  const hour = minute * 60;
+  const day = hour * 24;
+
+  const countDown = new Date('Aug 18, 2018 08:00:00').getTime();
+  const x = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = countDown - now;
+
+    document.getElementById('countdown-days').innerText = Math.floor(distance / day);
+    document.getElementById('countdown-hours').innerText = Math.floor((distance % day) / hour);
+    document.getElementById('countdown-minutes').innerText = Math.floor((distance % hour) / minute);
+    document.getElementById('countdown-seconds').innerText = Math.floor((distance % minute) / second);
+
+    // do something later when date is reached
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById('countdown-days').innerText = 0;
+      document.getElementById('countdown-hours').innerText = 0;
+      document.getElementById('countdown-minutes').innerText = 0;
+      document.getElementById('countdown-seconds').innerText = 0;
+    }
+  }, second);
 }
 
 function initMap() {
@@ -468,4 +481,34 @@ $('.map-section').click(function() {
   $(this)
     .find('.mt-close')
     .toggle();
+});
+
+$(window).load(() => {
+  // Page loader
+
+  $(window).trigger('scroll');
+  $(window).trigger('resize');
+});
+
+$(document).ready(() => {
+  $(window).trigger('resize');
+  initNav();
+});
+
+$(window).resize(() => {
+  splitSection();
+  initHeightMatch();
+});
+
+$(document).ready(() => {
+  if ($('#js-parallax-window').length) {
+    parallax();
+    initCountdown();
+  }
+});
+
+$(window).scroll(() => {
+  if ($('#js-parallax-window').length) {
+    parallax();
+  }
 });
