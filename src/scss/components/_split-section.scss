@@ -52,7 +52,7 @@
 }
 
 .split-section-content {
-	@include padding(110px 24px);
+	@include padding(110px $base-spacing);
 	@include margin(0 auto);
 	max-width: 450px;
 	position: relative;

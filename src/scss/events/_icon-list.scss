@@ -1,12 +1,12 @@
 .icon-list {
+	@include padding($base-spacing null $small-spacing);
 	list-style-type: none;
-	padding: 25px 0 15px;
 
 	li {
 		font-size: 18px;
 		font-weight: 500;
 		margin-bottom: 1rem;
-		padding-left: 2.25rem;
+		padding-left: $base-spacing + $small-spacing;
 		position: relative;
 
 		&::before {

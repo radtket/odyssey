@@ -1,56 +1,10 @@
 .footer {
-	padding: 16px 0;
+	@include padding(1rem null);
 	position: relative;
 	text-align: center;
 
 	@media only screen and (min-width: 600px) {
 		text-align: left;
-	}
-
-	&-nav {
-		margin-bottom: $small-spacing;
-
-		@media only screen and (min-width: 600px) {
-			float: left;
-			margin-bottom: 0;
-		}
-	}
-
-	&-social {
-		font-size: 0;
-		line-height: 1;
-
-		@media only screen and (min-width: 600px) {
-			float: right;
-		}
-
-		a {
-			height: 36px;
-			line-height: 36px;
-
-			&:hover {
-				svg {
-					fill: $color-red-l;
-				}
-			}
-		}
-
-		svg {
-			fill: $color-white;
-			height: 100%;
-			max-width: 100%;
-			transition: all .27s cubic-bezier(.3, .1, .580, 1);
-		}
-	}
-
-	h6 {
-		color: $color-white;
-		font-size: 16px;
-		font-weight: 500;
-	}
-
-	p {
-		color: $color-white;
 	}
 
 	a {
@@ -63,7 +17,7 @@
 
 	p,
 	a {
-		@include margin(null 16px 0 null);
+		@include margin(null 1rem 0 null);
 		display: inline-block;
 		font-size: 12px;
 	}
@@ -74,6 +28,48 @@
 		a:last-child {
 			margin-right: 0;
 		}
+	}
+
+	&__nav {
+		margin-bottom: $small-spacing;
+
+		@media only screen and (min-width: 600px) {
+			float: left;
+			margin-bottom: 0;
+		}
+	}
+
+	&__social {
+		font-size: 0;
+		line-height: 1;
+
+		@media only screen and (min-width: 600px) {
+			float: right;
+		}
+
+		&--item {
+			height: 36px;
+			line-height: 36px;
+
+			&:hover {
+				svg {
+					fill: $color-red-l;
+				}
+			}
+
+			svg {
+				fill: $color-white;
+				height: 100%;
+				max-width: 100%;
+				transition: all .27s cubic-bezier(.3, .1, .580, 1);
+			}
+		}
+	}
+
+	&__disclaimer {
+		color: $color-white;
+		font-size: 1rem;
+		font-weight: 500;
 	}
 }
 

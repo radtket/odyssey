@@ -95,7 +95,7 @@ $white: #fff;
 	color: rgba($color-black, 75);
 	font-size: 16px;
 	letter-spacing: .3em;
-	margin-left: 12px;
+	margin-left: $small-spacing;
 	text-transform: uppercase;
 
 	> * {

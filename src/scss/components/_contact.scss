@@ -50,7 +50,7 @@
 }
 
 .form-item {
-	margin-bottom: 24px;
+	margin-bottom: $base-spacing;
 
 	&__half {
 		@media only screen and (min-width: 850px) {

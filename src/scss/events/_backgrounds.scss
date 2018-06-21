@@ -216,6 +216,11 @@ $color-tiffany: #5bd8b4;
 	}
 }
 
+.home-section {
+	overflow: hidden;
+	position: relative;
+}
+
 .home-content {
 	@include size(100%);
 	color: $color-white;

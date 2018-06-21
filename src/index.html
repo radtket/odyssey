@@ -49,16 +49,16 @@
 	</nav>
 	<!-- some content to allow scrolling-->
 	<div class="hero">
-		<video autoplay muted loop id="myVideo">
+		<video class="hero__video" autoplay muted loop>
 			<source src="assets/video/meeting.webm" type="video/webm">
 			<source src="assets/video/meeting.mp4" type="video/mp4">
 			<source src="assets/video/meeting.ogv" type="video/ogv">
 		</video>
 
-		<div class="home-content">
-			<div class="home-text">
+		<div class="hero__content">
+			<div class="hero__content--text">
 
-				<h1 class="hs-line-8 no-transp font-alt mb-50 mb-xs-30">
+				<h1 class="hero__headline--small">
 					Your Event's Journey Begins Here
 				</h1>
 
@@ -435,25 +435,25 @@
 
 	<footer class="footer bg-black">
 		<div class="container">
-			<div class="footer-nav">
-				<h6 class="mb-0">© Odyssey Entertainment Marketing, LLC. 2018.</h6>
-				<p>All Rights Reserved</p>
+			<div class="footer__nav">
+				<h6 class="footer__disclaimer mb-0">© Odyssey Entertainment Marketing, LLC. 2018.</h6>
+				<p class="footer__nav--item color-white">All Rights Reserved</p>
 				<nav>
-					<a href="#">Privacy Policy</a>
-					<a href="#">Terms & Conditions</a>
+					<a href="#" class="footer__nav--item">Privacy Policy</a>
+					<a href="#" class="footer__nav--item">Terms & Conditions</a>
 				</nav>
 			</div>
 
-			<div class="footer-social">
+			<div class="footer__social">
 				<nav>
-					<a href="#" name="Twiiter">
+					<a href="#" class="footer__social--item" name="Twiiter">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380.4 380">
 							<path d="M190.2 40c-82.7 0-150 67.3-150 150s67.3 150 150 150 150-67.3 150-150-67.3-150-150-150zm66.9 115.7c.1 1.5.1 3 .1 4.5 0 45.6-34.7 98.2-98.2 98.2a97.4 97.4 0 0 1-52.9-15.5 73.7 73.7 0 0 0 8.2.5 69.6 69.6 0 0 0 42.9-14.8 34.7 34.7 0 0 1-32.3-24 34.9 34.9 0 0 0 6.5.6 33.9 33.9 0 0 0 9.1-1.2 34.5 34.5 0 0 1-27.7-33.8v-.5a33.5 33.5 0 0 0 15.7 4.3 34.5 34.5 0 0 1-10.7-46.1 97.8 97.8 0 0 0 71.1 36.1 33.3 33.3 0 0 1-.8-7.8 34.5 34.5 0 0 1 59.7-23.7 67.7 67.7 0 0 0 21.9-8.4 35.1 35.1 0 0 1-15.2 19.2 68.3 68.3 0 0 0 19.8-5.5 69.7 69.7 0 0 1-17.2 17.9z"
 							/>
 							<path d="M338.4 209.8l42-21-42-21v42zM42 167.8l-42 21 42 21v-42zM211.4 42l-21-42-21 42h42zm-42 296l21 42 21-42h-42z" />
 						</svg>
 					</a>
-					<a href="#" name="Instagram">
+					<a href="#" class="footer__social--item" name="Instagram">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380.4 380">
 							<path d="M190.2 220a30 30 0 1 0-24.3-47.5 29.5 29.5 0 0 0-5.7 17.5 30 30 0 0 0 30 30zm65.6-66.7v-29l-3.8.1h-25.1v29l28.9-.1z"
 							/>
@@ -463,7 +463,7 @@
 							/>
 						</svg>
 					</a>
-					<a href="#" name="Facebook">
+					<a href="#" class="footer__social--item" name="Facebook">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380.4 380">
 							<path d="M190.4 39.8c-82.7 0-150 67.3-150 150s67.3 150 150 150 150-67.3 150-150-67.3-150-150-150zm37.3 155.3h-24.4v87h-36.1v-87H150v-30.7h17.2v-19.9c0-14.2 6.7-36.5 36.4-36.5h26.8v30H211c-3.2 0-7.7 1.5-7.7 8.3v18.1h27.6z"
 							/>
