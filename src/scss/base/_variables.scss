@@ -8,13 +8,14 @@ $heading-line-height: 1.2;
 
 // Other Sizes
 $base-border-radius: 3px;
-$base-spacing: 1.5em;
+$base-spacing: 1.5rem;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
 $dark-gray: #333;
 $medium-gray: #999;
+$light-gray-alt: #666;
 $light-gray: #ddd;
 
 $color-white: #fafafa;
@@ -28,6 +29,11 @@ $color-red-d:#ab000d;
 $color-black-l: #484848;
 $color-black: #212121;
 $color-black-d: #000;
+
+// Event Colors
+$color-tiffany-l: #91ffe6;
+$color-tiffany: #5bd8b4;
+$color-tiffany-d: #17a684;
 
 // Font Colors
 $base-font-color: $color-black-l;

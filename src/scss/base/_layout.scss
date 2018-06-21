@@ -18,10 +18,12 @@ body {
 	margin: 0;
 }
 
-.mobile .page-section,
-.mobile .home-section,
-.mobile .small-section {
-	background-attachment: scroll;
+.mobile {
+	.page-section,
+	.home-section,
+	.small-section {
+		background-attachment: scroll;
+	}
 }
 
 .page-section {
@@ -78,17 +80,13 @@ body {
 }
 
 .bg-white {
-	background-color: #fff;
-}
-
-.bg-black,
-.bg-red {
-	color: rgba($color-white, .85);
+	background-color: $color-white;
+	color: rgba($color-black, .85);
 
 	h2,
 	h3,
 	h4 {
-		color: $color-white;
+		color: $color-black;
 		font-weight: 500;
 	}
 
@@ -100,13 +98,14 @@ body {
 	}
 }
 
-.bg-white {
-	color: rgba($color-black, .85);
+.bg-black,
+.bg-red {
+	color: rgba($color-white, .85);
 
 	h2,
 	h3,
 	h4 {
-		color: $color-black;
+		color: $color-white;
 		font-weight: 500;
 	}
 
@@ -145,22 +144,22 @@ body {
 }
 
 .pillar-media {
-	width: 110px;
-	text-align: center;
 	float: left;
 	margin-right: $small-spacing;
+	text-align: center;
+	width: 110px;
 	// @include span-columns(2 of 6);
 	h3 {
 		color: rgba($color-black, .20);
 		font-size: 72px;
+		font-weight: 900;
 		line-height: 72px;
 		margin-bottom: 6px;
-		font-weight: 900;
 	}
 
 	svg {
-		width: 80%;
 		fill: $color-black;
+		width: 80%;
 	}
 }
 
@@ -169,16 +168,13 @@ body {
 }
 
 .pillar-section {
-	position: relative;
 	overflow: hidden;
+	position: relative;
 
 	&::before {
-		position: absolute;
-		top: -3%;
-		right: -3%;
-		height: 100%;
-		width: 50%;
-		background-image: url(../assets/branding/logo-primary.png);
+		@include position(absolute, -3% -3% null null);
+		@include size(50%, 100%);
+		background-image: url('../assets/branding/logo-primary.png');
 		background-repeat: no-repeat;
 		background-size: contain;
 		content: '';

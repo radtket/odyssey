@@ -1,20 +1,20 @@
 //colors
-$black_60: rgba($color-black-d, .6);
-$black_20: rgba($color-black-d, .2);
+$black-60: rgba($color-black-d, .6);
+$black-20: rgba($color-black-d, .2);
 
 //urls
-$url_0: url(https://unsplash.it/2000/800?image=563);
+$url-0: url(https://unsplash.it/2000/800?image=563);
 
 .navbar {
+	box-shadow: 0 1px 10px rgba($color-black-d, 0), 0 1px 0 rgba($color-black-d, 0);
 	margin-bottom: 20px;
 	min-height: 50px;
 	position: relative;
 	transition: $base-duration;
-	box-shadow: 0 1px 10px rgba(0, 0, 0, 0), 0 1px 0 rgba(0, 0, 0, 0);
 
 	// White Navbar
 	&.navbar__white {
-		background: rgba($color-black, 0.65);
+		background: rgba($color-black, .65);
 
 		.navbar-brand {
 			svg {
@@ -23,11 +23,11 @@ $url_0: url(https://unsplash.it/2000/800?image=563);
 				}
 			}
 		}
+
 		.nav-link a {
 			color: $color-white;
 		}
 	}
-
 }
 
 .navbar-brand {
@@ -61,11 +61,11 @@ $url_0: url(https://unsplash.it/2000/800?image=563);
 
 .navbar--color--secondary {
 	background: $color-black;
-	box-shadow: 0 1px 10px rgba(0, 0, 0, .1), 0 1px 0 rgba(0, 0, 0, .027);
+	box-shadow: 0 1px 10px rgba($color-black-d, .1), 0 1px 0 rgba($color-black-d, .027);
 }
 
 .navbar--color--ghost {
-	// background: $black_20;
+	// background: $black-20;
 	background: transparent;
 
 	svg {
@@ -140,7 +140,7 @@ $url_0: url(https://unsplash.it/2000/800?image=563);
 }
 
 .hero {
-	// background: $url_0 center top/cover no-repeat;
+	// background: $url-0 center top/cover no-repeat;
 	height: 80vh;
 	min-height: 600px;
 	position: relative;
@@ -156,14 +156,14 @@ $url_0: url(https://unsplash.it/2000/800?image=563);
 .overlay {
 	@include position(absolute, 0 null null 0);
 	@include size(100%);
-	background: $black_60;
+	background: $black-60;
 	z-index: -1;
 }
 
 
 
 
-/* Style the video: 100% width and height to cover the entire window */
+// Style the video: 100% width and height to cover the entire window
 #myVideo {
 	@include position(fixed, 50% null null 50%);
 	height: auto;
@@ -177,26 +177,24 @@ $url_0: url(https://unsplash.it/2000/800?image=563);
 .home-content {
 	@include size(100%);
 	display: table;
-	text-align: center;
 	position: relative;
+	text-align: center;
 }
 
 .home-text {
+	@include size(100%);
 	display: table-cell;
-	height: 100%;
-	width: 100%;
 	vertical-align: middle;
 
 	svg {
-		margin: 0 $small-spacing;
+		@include margin(0 $small-spacing ($base-spacing * 2));
 		max-height: 150px;
-		margin-bottom: $base-spacing * 2;
 	}
 }
 
 .hs-line-8 {
 	color: $color-black;
-	letter-spacing: 0.25em;
+	letter-spacing: .25em;
 	text-transform: uppercase;
 }
 

@@ -1,34 +1,34 @@
 .btn-event {
-  background: $color-tiffany;
-  border-color: $color-black;
-  color: $color-black;
+	background: $color-tiffany;
+	border-color: $color-black;
+	color: $color-black;
 
-  &:hover {
-    background-color: $color-black;
-    border-color: $color-black;
-    color: $color-white;
-  }
+	&:hover {
+		background-color: $color-black;
+		border-color: $color-black;
+		color: $color-white;
+	}
 
-  &-primary {
-    background: $color-tiffany;
-    border-color: $color-tiffany;
-    color: $color-black;
+	&-primary {
+		background: $color-tiffany;
+		border-color: $color-tiffany;
+		color: $color-black;
 
-    &:hover {
-      background-color: #17a684;
-      border-color: #17a684;
-      color: $color-black-d;
-    }
-  }
+		&:hover {
+			background-color: $color-tiffany-d;
+			border-color: $color-tiffany-d;
+			color: $color-black-d;
+		}
+	}
 
-  &-outline-w {
-    background: transparent;
-    border-color: $color-white;
+	&-outline-w {
+		background: transparent;
+		border-color: $color-white;
 
-    &:hover {
-      background-color: $color-tiffany;
-      border-color: darken($color-tiffany, 20%);
-      color: $color-black;
-    }
-  }
+		&:hover {
+			background-color: $color-tiffany;
+			border-color: $color-tiffany-d;
+			color: $color-black;
+		}
+	}
 }

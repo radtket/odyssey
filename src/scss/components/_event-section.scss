@@ -21,13 +21,13 @@
 	@include margin(null auto $base-spacing);
 	background-color: $color-white;
 	box-shadow: 0 1px 3px 1px rgba($color-black-d, .1), 0 5px 5px 0 rgba($color-black-d, .1);
+	max-width: 350px;
 	position: relative;
 	transition: .5s;
-	max-width: 350px;
 
 	@media only screen and (min-width: 650px) {
-		max-width: 100%;
 		@include span-columns(4 of 8);
+		max-width: 100%;
 	}
 
 	img {
@@ -51,7 +51,7 @@
 		}
 
 		span {
-			color: #666666;
+			color: $light-gray-alt;
 			font-size: 14px;
 		}
 	}

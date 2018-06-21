@@ -3,16 +3,16 @@
 
 	.container__flex {
 		display: block;
+
 		@media only screen and (min-width: 850px) {
 			display: flex;
 		}
 	}
-
 }
 
 .contact-section__copy {
-	position: relative;
 	margin-bottom: $base-spacing * 2;
+	position: relative;
 
 	@media only screen and (min-width: 850px) {
 		@include span-columns(4);
@@ -36,7 +36,6 @@
 }
 
 .contact-section__form {
-
 	@media only screen and (min-width: 850px) {
 		@include span-columns(8);
 	}

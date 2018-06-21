@@ -7,6 +7,10 @@ $white: #fff;
 	position: relative;
 }
 
+.gm-style-cc {
+	display: none;
+}
+
 #map-canvas {
 	background-color: $color-black;
 	height: 500px;
@@ -16,10 +20,6 @@ $white: #fff;
 	@media only screen and (max-width: 768px) {
 		height: 350px;
 	}
-}
-
-.gm-style-cc {
-	display: none !important;
 }
 
 .map-section {
