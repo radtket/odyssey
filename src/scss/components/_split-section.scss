@@ -1,85 +1,74 @@
-
 .split-section {
-	@include outer-container(100%);
 	// height: 1%;
+	@include outer-container(100%);
 	position: relative;
-}
 
-.split-half {
-	overflow: hidden;
-	position: relative;
-	width: 100%;
+	&__half {
+		overflow: hidden;
+		position: relative;
+		width: 100%;
 
-	@media only screen and (min-width: 860px) {
-		position: initial;
-		width: 50%;
-	}
-}
+		@media only screen and (min-width: 860px) {
+			position: initial;
+			width: 50%;
+		}
 
-.split-left {
-	@media only screen and (min-width: 860px) {
-		float: left;
-	}
-}
+		&--right {
+			@media only screen and (min-width: 860px) {
+				float: right;
+			}
 
-.split-right {
-	@media only screen and (min-width: 860px) {
-		float: right;
-	}
+			.split-section__half--bg {
+				left: inherit;
+				right: 0;
+			}
+		}
 
-	.split-bg {
-		left: inherit;
-		right: 0;
-	}
-}
+		&--left {
+			@media only screen and (min-width: 860px) {
+				float: left;
+			}
+		}
 
-.split-bg {
-	@include position(absolute, 0 null null 0);
-	@include size(100%);
-	z-index: 0;
 
-	@media only screen and (min-width: 860px) {
-		width: 50%;
-	}
-}
+		&--bg {
+			@include position(absolute, 0 null null 0);
+			@include size(100%);
+			z-index: 0;
 
-.vertical-center {
-	@include padding(100px null);
-
-	@media only screen and (min-width: 860px) {
-		@include padding(0 null);
-	}
-}
-
-.split-section-content {
-	@include padding(110px $base-spacing);
-	@include margin(0 auto);
-	max-width: 450px;
-	position: relative;
-	z-index: 1;
-
-	.visible {
-		// font-size: 80px;
-		font-size: modular-scale(7);
-		margin-bottom: 0;
-	}
-
-	@media only screen and (min-width: 860px) {
-		@include padding(null 0);
-		max-width: 325px;
-
-		.visible {
-			// font-size: 70px;
-			font-size: modular-scale(6);
+			@media only screen and (min-width: 860px) {
+				width: 50%;
+			}
 		}
 	}
 
-	@media (min-width: 1120px) {
-		max-width: 400px;
+	&__content {
+		@include padding(100px $base-spacing);
+		@include margin(0 auto);
+		max-width: 450px;
+		position: relative;
+		z-index: 1;
 
-		.visible {
-			// font-size: 80px;
+		&--headline {
 			font-size: modular-scale(7);
+			margin-bottom: 0;
+		}
+
+		@media only screen and (min-width: 860px) {
+			@include padding(null 0);
+			max-width: 325px;
+
+			&--headline {
+				font-size: modular-scale(6);
+			}
+		}
+
+		@media (min-width: 1120px) {
+			max-width: 400px;
+
+			&--headline {
+				font-size: modular-scale(7);
+			}
 		}
 	}
 }

@@ -23,7 +23,6 @@
 	vertical-align: middle;
 	white-space: nowrap;
 
-
 	&:hover {
 		background-color: shade($color-red, 10%);
 		border-color: shade($color-red, 10%);
@@ -41,6 +40,41 @@
 
 		&:hover {
 			background-color: shade($color-red, 10%);
+		}
+	}
+
+	&__event {
+		background: $color-tiffany;
+		border-color: $color-black;
+		color: $color-black;
+
+		&:hover {
+			background-color: $color-black;
+			border-color: $color-black;
+			color: $color-white;
+		}
+
+		&--primary {
+			background: $color-tiffany;
+			border-color: $color-tiffany;
+			color: $color-black;
+
+			&:hover {
+				background-color: $color-tiffany-d;
+				border-color: $color-tiffany-d;
+				color: $color-black-d;
+			}
+		}
+
+		&--outline-w {
+			background: transparent;
+			border-color: $color-white;
+
+			&:hover {
+				background-color: $color-tiffany;
+				border-color: $color-tiffany-d;
+				color: $color-black;
+			}
 		}
 	}
 }

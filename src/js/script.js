@@ -76,19 +76,21 @@ function splitSection() {
     const smallWidth = contentThird + difference + 13;
     const bigWidth = windowWidth - smallWidth;
     if ($(window).width() < 861) {
-      $('.split-onethird, .split-onethird .split-bg, .split-twothird, .split-twothird .split-bg').css({
+      $(
+        '.split-onethird, .split-onethird .split-section__half--bg, .split-twothird, .split-twothird .split-section__half--bg'
+      ).css({
         width: '100%',
       });
     } else {
-      $('.split-onethird, .split-onethird .split-bg').css({
+      $('.split-onethird, .split-onethird .split-section__half--bg').css({
         width: `${smallWidth}px`,
       });
-      $('.split-twothird, .split-twothird .split-bg').css({
+      $('.split-twothird, .split-twothird .split-section__half--bg').css({
         width: `${bigWidth}px`,
       });
     }
     setTimeout(() => {
-      $('.split-section .vertical-center').each(function() {
+      $('.split-section__content').each(function() {
         const n = $(this).height();
         const r = parseInt($(this).css('padding-top')) + parseInt($(this).css('padding-bottom'));
         const i = n + r;
@@ -109,7 +111,7 @@ function splitSection() {
     }, 500);
   }
   if ($(window).width() < 861) {
-    $('.split-left, .split-right').each(function() {
+    $('.split-section__half').each(function() {
       const n = $(this).height();
       if (n < 50) {
         $(this).css({

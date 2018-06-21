@@ -59,10 +59,10 @@ body {
 	&__flex {
 		display: flex;
 	}
-}
 
-.container-lead {
-	@include outer-container(800px);
+	&__lead {
+		max-width: 800px;
+	}
 }
 
 .row {
@@ -71,12 +71,12 @@ body {
 
 // Backgrounds
 
-.bg-red {
-	background-color: $color-red;
-}
-
 .bg-black {
 	background-color: $color-black;
+}
+
+.bg-red {
+	background-color: $color-red;
 }
 
 .bg-white {
@@ -87,14 +87,6 @@ body {
 	h3,
 	h4 {
 		color: $color-black;
-		font-weight: 500;
-	}
-
-	p {
-		// font-size: 20px;
-		font-size: modular-scale(1);
-		font-weight: 300;
-		line-height: 1.6;
 	}
 }
 
@@ -106,80 +98,16 @@ body {
 	h3,
 	h4 {
 		color: $color-white;
+	}
+}
+
+.bg-black,
+.bg-red,
+.bg-white {
+
+	h2,
+	h3,
+	h4 {
 		font-weight: 500;
 	}
-
-	p {
-		// font-size: 20px;
-		font-size: modular-scale(1);
-		font-weight: 300;
-		line-height: 1.6;
-	}
 }
-
-.pillar-wrap {
-	// @include span-columns(6);
-	@include clearfix;
-	margin-bottom: 42px;
-
-	@media only screen and (min-width: 850px) {
-		@include span-columns(6);
-	}
-
-	@media only screen and (min-width: 850px) {
-		&__middle {
-			@include shift(3);
-		}
-
-		&__right {
-			@include shift(6);
-		}
-	}
-}
-
-.uppercase {
-	color: $color-black-d;
-	font-weight: 900;
-	text-transform: uppercase;
-}
-
-.pillar-media {
-	float: left;
-	margin-right: $small-spacing;
-	text-align: center;
-	width: 110px;
-	// @include span-columns(2 of 6);
-	h3 {
-		color: rgba($color-black, .20);
-		font-size: 72px;
-		font-weight: 900;
-		line-height: 72px;
-		margin-bottom: 6px;
-	}
-
-	svg {
-		fill: $color-black;
-		width: 80%;
-	}
-}
-
-.pillar-copy {
-	@include span-columns(4 of 6);
-}
-
-.pillar-section {
-	overflow: hidden;
-	position: relative;
-
-	&::before {
-		@include position(absolute, -3% -3% null null);
-		@include size(50%, 100%);
-		background-image: url('../assets/branding/logo-primary.png');
-		background-repeat: no-repeat;
-		background-size: contain;
-		content: '';
-		display: block;
-		opacity: .3;
-	}
-}
-

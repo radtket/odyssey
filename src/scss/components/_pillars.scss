@@ -1,0 +1,54 @@
+.pillar-section {
+	&::before {
+		@include position(absolute, -3% -3% null null);
+		@include size(50%, 100%);
+		background-image: url('../assets/branding/logo-primary.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+		content: '';
+		display: block;
+		opacity: .3;
+	}
+
+	&__wrap {
+		@include clearfix;
+		margin-bottom: $base-spacing * 2;
+
+		@media only screen and (min-width: 850px) {
+			@include span-columns(6);
+
+			&--middle {
+				@include shift(3);
+			}
+
+			&--right {
+				@include shift(6);
+			}
+		}
+	}
+
+	&__media {
+		float: left;
+		margin-right: $small-spacing;
+		text-align: center;
+		width: 110px;
+
+		h3 {
+			color: rgba($color-black, .20);
+			font-size: 72px;
+			font-weight: 900;
+			line-height: 72px;
+			margin-bottom: 6px;
+		}
+
+		svg {
+			fill: $color-black;
+			width: 80%;
+		}
+	}
+
+	&__copy {
+		@include span-columns(4 of 6);
+	}
+
+}

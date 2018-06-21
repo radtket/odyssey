@@ -36,6 +36,8 @@ h5 {
 }
 
 p {
+	font-size: modular-scale(1);
+	font-weight: 300;
 	line-height: 1.6;
 	margin: 0 0 $small-spacing;
 }
@@ -79,4 +81,10 @@ hr {
 .lead {
 	font-size: modular-scale(1);
 	font-weight: 300;
+}
+
+.uppercase {
+	color: $color-black-d;
+	font-weight: 900;
+	text-transform: uppercase;
 }
