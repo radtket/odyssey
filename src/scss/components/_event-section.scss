@@ -1,63 +1,60 @@
-.event-copy {
-	margin-bottom: $base-spacing * 2;
+.event {
+	&__copy {
+		margin-bottom: $base-spacing * 2;
 
-	@media only screen and (min-width: 992px) {
-		@include span-columns(4);
-		margin-bottom: 0;
-	}
-
-	.btn {
-		margin-top: $base-spacing;
-	}
-}
-
-.event-cards {
-	@media only screen and (min-width: 992px) {
-		@include span-columns(8);
-	}
-}
-
-.card {
-	@include margin(null auto $base-spacing);
-	background-color: $color-white;
-	box-shadow: 0 1px 3px 1px rgba($color-black-d, .1), 0 5px 5px 0 rgba($color-black-d, .1);
-	max-width: 350px;
-	position: relative;
-	transition: .5s;
-
-	@media only screen and (min-width: 650px) {
-		@include span-columns(4 of 8);
-		max-width: 100%;
-	}
-
-	img {
-		display: block;
-		height: auto;
-		margin: 0 auto;
-		max-width: 100%;
-	}
-
-	&-content {
-		padding: ($base-spacing + $small-spacing) $base-spacing;
-	}
-
-	&-title {
-		margin-bottom: $base-spacing;
-
-		h4 {
-			color: $color-red;
-			font-size: 24px;
+		@media only screen and (min-width: 992px) {
+			@include span-columns(4);
 			margin-bottom: 0;
 		}
 
-		span {
-			color: $light-gray-alt;
-			font-size: 14px;
+		.btn {
+			margin-top: $base-spacing;
 		}
 	}
 
-	p {
-		color: $color-black;
-		font-size: 18px;
+	&__cards {
+		@media only screen and (min-width: 992px) {
+			@include span-columns(8);
+		}
+	}
+
+	&-card {
+		@include margin(null auto $base-spacing);
+		background-color: $color-white;
+		box-shadow: 0 1px 3px 1px rgba($color-black-d, .1), 0 5px 5px 0 rgba($color-black-d, .1);
+		max-width: 350px;
+		position: relative;
+		transition: .5s;
+
+		@media only screen and (min-width: 650px) {
+			@include span-columns(4 of 8);
+			max-width: 100%;
+		}
+
+		img {
+			display: block;
+			height: auto;
+		}
+
+		&__content {
+			padding: ($base-spacing + $small-spacing) $base-spacing;
+
+			&--title {
+				color: $color-red;
+				font-size: 24px;
+				margin-bottom: 0;
+			}
+
+			&--meta {
+				color: $light-gray-alt;
+				font-size: 14px;
+			}
+
+			&--excerpt {
+				color: $color-black;
+				font-size: 18px;
+				margin-top: $base-spacing;
+			}
+		}
 	}
 }

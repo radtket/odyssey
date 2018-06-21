@@ -69,13 +69,13 @@ hr {
 .headline-w-sub {
 	margin-bottom: 42px;
 
+	&__sub {
+		font-weight: 400;
+	}
+
 	> * {
 		margin-bottom: 0;
 	}
-}
-
-.primary-headline__sub {
-	font-weight: 400 !important;
 }
 
 .lead {
