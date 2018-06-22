@@ -1,0 +1,33 @@
+// <div class="imgshadow__tiffany">
+// 	<figure>
+// 		<img src="http://wahabali.com/work/vation/images/allhome/2/img-01.jpg" alt="image description">
+// 	</figure>
+// </div>
+
+.imgshadow__tiffany {
+	@include clearfix;
+	@include padding(0 40px 40px 0);
+	float: left;
+	width: 100%;
+
+	figure {
+		// float: left;
+		position: relative;
+		width: 100%;
+
+		&::before {
+			@include position(absolute, 40px -40px null null);
+			@include size(100%);
+			background: $color-tiffany;
+			content: '';
+			z-index: 1;
+		}
+
+		img {
+			height: auto;
+			max-width: 100%;
+			position: relative;
+			z-index: 2;
+		}
+	}
+}

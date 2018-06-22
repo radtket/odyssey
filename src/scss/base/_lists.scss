@@ -18,3 +18,59 @@ dd {
 	margin: 0;
 }
 
+// Events Line List
+.line-list {
+	li {
+		color: $color-white;
+		font-size: 1.25em;
+		margin-bottom: 1rem;
+		margin-left: 2.25em;
+		position: relative;
+
+		&::before {
+			@include position(absolute, .75em null null -2.25em);
+			background: $color-tiffany;
+			content: '';
+			display: block;
+			height: 2px;
+			width: 1.5em;
+		}
+
+		small {
+			color: rgba($color-white, .85);
+			display: block;
+		}
+	}
+}
+
+
+// Event Icon List
+.icon-list {
+	@include padding($base-spacing null $small-spacing);
+	list-style-type: none;
+
+	li {
+		font-size: 18px;
+		font-weight: 500;
+		margin-bottom: 1rem;
+		padding-left: $base-spacing + $small-spacing;
+		position: relative;
+
+		&::before {
+			@include size(1.25rem);
+			@include position(absolute, 14px null null 0);
+			background-image: url('../assets/GameDayGolfClassic/checkmark.png');
+			background-size: contain;
+			border-radius: $base-border-radius;
+			content: '';
+			display: block;
+			transform: translateY(-50%);
+			z-index: 2;
+		}
+
+		small {
+			color: $color-black-l;
+			display: block;
+		}
+	}
+}

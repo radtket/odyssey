@@ -137,9 +137,9 @@ function initHeightMatch() {
 }
 
 function parallax() {
-  if ($('#js-parallax-window').length > 0) {
-    const plxBackground = $('#js-parallax-background');
-    const plxWindow = $('#js-parallax-window');
+  if ($('#js-parallax__window').length > 0) {
+    const plxBackground = $('#js-parallax__background');
+    const plxWindow = $('#js-parallax__window');
 
     const plxWindowTopToPageTop = $(plxWindow).offset().top;
     const windowTopToPageTop = $(window).scrollTop();
@@ -478,10 +478,10 @@ function initMap() {
 $('.map-section').click(function() {
   $(this).toggleClass('js-active');
   $(this)
-    .find('.mt-open')
+    .find('.map-toggle__open')
     .toggle();
   $(this)
-    .find('.mt-close')
+    .find('.map-toggle__close')
     .toggle();
 });
 
@@ -503,14 +503,14 @@ $(window).resize(() => {
 });
 
 $(document).ready(() => {
-  if ($('#js-parallax-window').length) {
+  if ($('#js-parallax__window').length) {
     parallax();
     initCountdown();
   }
 });
 
 $(window).scroll(() => {
-  if ($('#js-parallax-window').length) {
+  if ($('#js-parallax__window').length) {
     parallax();
   }
 });

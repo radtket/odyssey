@@ -1,0 +1,51 @@
+.ticket-sec {
+	&__copy {
+		@include margin(null auto ($base-spacing * 2));
+		max-width: 100%;
+		width: 750px;
+
+		@media (min-width: 991px) {
+			@include span-columns(5);
+		}
+	}
+
+	&__ticket {
+		background: $color-white;
+		border: 2px solid $color-black;
+		font-size: 14px;
+		position: relative;
+
+		&--inner {
+			@include padding($base-spacing ($base-spacing * 2));
+
+			.btn {
+				display: block;
+			}
+		}
+
+		&--wrap {
+			@include margin(null auto);
+			max-width: 100%;
+			width: 535px;
+
+			@media (min-width: 991px) {
+				@include span-columns(6);
+				@include shift(1);
+			}
+		}
+
+		header {
+			background-color: $color-black;
+			color: $color-white;
+			font-size: 20px;
+			font-weight: 500;
+			padding: $small-spacing $base-spacing;
+			text-align: center;
+			text-transform: uppercase;
+
+			strong {
+				color: $color-tiffany;
+			}
+		}
+	}
+}

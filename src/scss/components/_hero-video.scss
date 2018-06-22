@@ -44,6 +44,64 @@
 		letter-spacing: .25em;
 		text-transform: uppercase;
 	}
+
+
+	// Top Bar - Events Hero
+	&__bar {
+		background: $color-black;
+		padding: $base-spacing ($base-spacing * 2);
+
+		> svg {
+			display: inline-block;
+			margin: 0 0 $base-spacing;
+			width: 100%;
+		}
+
+		&--location {
+			@media (max-width: 649px) {
+				margin-bottom: $small-spacing;
+			}
+
+			li {
+				display: block;
+				letter-spacing: .15em;
+				text-transform: uppercase;
+
+				@media (min-width: 650px) {
+					display: inline-block;
+					margin-bottom: $small-spacing;
+
+					span {
+						margin: 0 ($small-spacing / 2) $small-spacing;
+					}
+				}
+
+				@media (min-width: 800px) {
+					font-size: 20px;
+				}
+			}
+
+			strong {
+				@include margin(null ($small-spacing / 2));
+				color: $color-tiffany;
+				font-weight: 900;
+			}
+		}
+	}
+}
+
+
+// Event Hero
+
+.fixed-height-small {
+	box-sizing: border-box;
+	min-height: 600px;
+	overflow: hidden;
+	position: relative;
+
+	@media only screen and (max-width: 480px) {
+		min-height: 300px;
+	}
 }
 
 

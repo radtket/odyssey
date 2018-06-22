@@ -69,6 +69,13 @@ body {
 	@include row;
 }
 
+.half-column {
+	@media (min-width: 867px) {
+		@include span-columns(6);
+	}
+}
+
+
 // Backgrounds
 
 .bg-black {
@@ -109,5 +116,22 @@ body {
 	h3,
 	h4 {
 		font-weight: 500;
+	}
+}
+
+// Event Backgrounds
+.bg-tiffany {
+	background: $color-tiffany;
+	color: rgba($color-black, .85);
+
+	h2 {
+		color: $color-black;
+		font-weight: 500;
+	}
+
+	p {
+		font-size: modular-scale(1);
+		font-weight: 300;
+		line-height: 1.6;
 	}
 }

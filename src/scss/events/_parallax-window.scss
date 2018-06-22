@@ -1,35 +1,37 @@
 $parallax-window-height: 35em;
 $parallax-background-height: $parallax-window-height * 2;
 
-.parallax-window {
-	@include size(100%, 60vh);
-	display: table;
-	max-height: $parallax-window-height;
-	overflow: hidden;
-	position: relative;
-	text-align: center;
+.parallax {
+	&__window {
+		@include size(100%, 60vh);
+		display: table;
+		max-height: $parallax-window-height;
+		overflow: hidden;
+		position: relative;
+		text-align: center;
 
-	&::after {
-		@include position(absolute, 0);
-		@include size(100%);
-		background-color: rgba($color-tiffany, .6);
-		content: '';
+		&::after {
+			@include position(absolute, 0);
+			@include size(100%);
+			background-color: rgba($color-tiffany, .6);
+			content: '';
+		}
 	}
-}
 
-.parallax-static-content {
-	@include size(100%);
-	color: $color-white;
-	display: table-cell;
-	position: relative;
-	vertical-align: middle;
-	z-index: 9;
-}
+	&__static-content {
+		@include size(100%);
+		color: $color-white;
+		display: table-cell;
+		position: relative;
+		vertical-align: middle;
+		z-index: 9;
+	}
 
-.parallax-background {
-	@include position(absolute, (- $parallax-window-height / 3) null null 0);
-	@include size(100%, $parallax-background-height);
-	background: url('http://cdn.cybergolf.com/images/365/header7.jpg') no-repeat;
-	background-position: top;
-	background-size: cover;
+	&__background {
+		@include position(absolute, (- $parallax-window-height / 3) null null 0);
+		@include size(100%, $parallax-background-height);
+		background: url('../assets/GameDayGolfClassic/parallax-bg.jpg') no-repeat;
+		background-position: top;
+		background-size: cover;
+	}
 }
