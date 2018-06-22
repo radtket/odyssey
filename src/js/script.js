@@ -138,20 +138,20 @@ function initHeightMatch() {
 
 function parallax() {
   if ($('#js-parallax__window').length > 0) {
-    const plxBackground = $('#js-parallax__background');
-    const plxWindow = $('#js-parallax__window');
+    const parallaxBackground = $('#js-parallax__background');
+    const parallaxWindow = $('#js-parallax__window');
 
-    const plxWindowTopToPageTop = $(plxWindow).offset().top;
+    const parallaxWindowTopToPageTop = $(parallaxWindow).offset().top;
     const windowTopToPageTop = $(window).scrollTop();
-    const plxWindowTopToWindowTop = plxWindowTopToPageTop - windowTopToPageTop;
+    const parallaxWindowTopToWindowTop = parallaxWindowTopToPageTop - windowTopToPageTop;
 
-    const plxBackgroundTopToPageTop = $(plxBackground).offset().top;
+    const parallaxBackgroundTopToPageTop = $(parallaxBackground).offset().top;
     const windowInnerHeight = window.innerHeight;
-    const plxBackgroundTopToWindowTop = plxBackgroundTopToPageTop - windowTopToPageTop;
-    const plxBackgroundTopToWindowBottom = windowInnerHeight - plxBackgroundTopToWindowTop;
-    const plxSpeed = 0.35;
+    const parallaxBackgroundTopToWindowTop = parallaxBackgroundTopToPageTop - windowTopToPageTop;
+    const parallaxBackgroundTopToWindowBottom = windowInnerHeight - parallaxBackgroundTopToWindowTop;
+    const parallaxSpeed = 0.35;
 
-    plxBackground.css('top', `${-(plxWindowTopToWindowTop * plxSpeed)}px`);
+    parallaxBackground.css('top', `${-(parallaxWindowTopToWindowTop * parallaxSpeed)}px`);
   }
 }
 
@@ -475,6 +475,68 @@ function initMap() {
   });
 }
 
+function smoothScroll(toElement, speed) {
+  const windowObject = window;
+  let windowPos = windowObject.pageYOffset;
+  const pointer = toElement.getAttribute('href').slice(1);
+  const elem = document.getElementById(pointer);
+  const elemOffset = elem.offsetTop;
+
+  const counter = setInterval(() => {
+    if (windowPos > elemOffset) {
+      // from bottom to top
+      windowObject.scrollTo(0, windowPos);
+      windowPos -= speed;
+
+      if (windowPos <= elemOffset) {
+        // scrolling until elemOffset is higher than scrollbar position, cancel interval and set scrollbar to element position
+        clearInterval(counter);
+        windowObject.scrollTo(0, elemOffset);
+      }
+    } else {
+      // from top to bottom
+      windowObject.scrollTo(0, windowPos);
+      windowPos += speed;
+
+      if (windowPos >= elemOffset) {
+        // scroll until scrollbar is lower than element, cancel interval and set scrollbar to element position
+        clearInterval(counter);
+        windowObject.scrollTo(0, elemOffset);
+      }
+    }
+  }, 1);
+}
+
+// call example
+function initSmoothScroll() {
+  const navPointer = document.getElementsByClassName('js-smoothscroll');
+
+  for (let i = 0; i < navPointer.length; i += 1) {
+    navPointer[i].addEventListener('click', function(e) {
+      smoothScroll(this, 18);
+      e.preventDefault();
+    });
+  }
+}
+
+function removeUrlHash() {
+  let scrollV;
+  let scrollH;
+  const loc = window.location;
+  if ('pushState' in history) history.pushState('', document.title, loc.pathname + loc.search);
+  else {
+    // Prevent scrolling by storing the page's current scroll offset
+    scrollV = document.body.scrollTop;
+    scrollH = document.body.scrollLeft;
+
+    loc.hash = '';
+
+    // Restore the scroll offset, should be flicker free
+    document.body.scrollTop = scrollV;
+    document.body.scrollLeft = scrollH;
+  }
+}
+
 $('.map-section').click(function() {
   $(this).toggleClass('js-active');
   $(this)
@@ -490,6 +552,16 @@ $(window).load(() => {
 
   $(window).trigger('scroll');
   $(window).trigger('resize');
+  removeUrlHash();
+  initSmoothScroll();
+
+  // Hash menu forwarding
+  if (window.location.hash && $(window.location.hash).length) {
+    const hashOffset = $(window.location.hash).offset().top;
+    $('html, body').animate({
+      scrollTop: hashOffset,
+    });
+  }
 });
 
 $(document).ready(() => {
