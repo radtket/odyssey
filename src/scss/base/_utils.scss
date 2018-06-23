@@ -7,13 +7,16 @@
 }
 
 .fill-white {
-	fill: #fff;
+	fill: $color-white;
+}
+
+.fill-red {
+	fill: $color-red;
 }
 
 .fill-teal {
-	fill: #5bd8b4;
+	fill: $color-tiffany;
 }
-
 
 .color-white {
 	color: $color-white;

@@ -13,10 +13,14 @@ $url-0: url(https://unsplash.it/2000/800?image=563);
 	transition: $base-duration;
 
 	// White Navbar
-	&.navbar__white {
+	&__white {
 		background: rgba($color-black, .65);
 
 		.navbar-brand {
+			.fill-red {
+				fill: $color-red;
+			}
+
 			svg {
 				path {
 					fill: $color-white;
@@ -36,8 +40,8 @@ $url-0: url(https://unsplash.it/2000/800?image=563);
 	padding-left: 1em;
 	padding-right: 2em;
 
-	.cls-1 {
-		fill: $color-red !important;
+	.fill-red {
+		fill: $color-red;
 	}
 
 	svg {
