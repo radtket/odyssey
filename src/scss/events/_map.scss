@@ -1,7 +1,3 @@
-
-//colors
-$white: #fff;
-
 .google-map {
 	background: $color-black;
 	position: relative;
@@ -75,7 +71,7 @@ $white: #fff;
 		@include position(absolute, 0 null null 0);
 		background: $color-black;
 		border-radius: 2px;
-		content: '';
+		content: "";
 		display: block;
 		transform: rotate(45deg);
 	}
@@ -98,7 +94,7 @@ $white: #fff;
 	margin-left: $small-spacing;
 	text-transform: uppercase;
 
-	> * {
+	>* {
 		position: relative;
 	}
 }

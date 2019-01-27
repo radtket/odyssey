@@ -14,7 +14,7 @@ $parallax-background-height: $parallax-window-height * 2;
 			@include position(absolute, 0);
 			@include size(100%);
 			background-color: rgba($color-tiffany, .6);
-			content: '';
+			content: "";
 		}
 	}
 
@@ -30,7 +30,7 @@ $parallax-background-height: $parallax-window-height * 2;
 	&__background {
 		@include position(absolute, (- $parallax-window-height / 3) null null 0);
 		@include size(100%, $parallax-background-height);
-		background: url('../assets/GameDayGolfClassic/parallax-bg.jpg') no-repeat;
+		background: url('../img/gameday-classic/parallax-bg.jpg') no-repeat;
 		background-position: top;
 		background-size: cover;
 	}

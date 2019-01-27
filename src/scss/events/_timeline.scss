@@ -48,13 +48,13 @@
 		background-color: $color-black;
 		border: 2px solid $light-gray;
 		border-radius: 100%;
-		content: '';
+		content: "";
 	}
 
 	&::after {
 		@include position(absolute, 20px null -62px -37px);
 		background-color: $light-gray;
-		content: '';
+		content: "";
 		width: 2px;
 	}
 }

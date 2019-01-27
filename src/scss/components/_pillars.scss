@@ -2,12 +2,12 @@
 	&::before {
 		@include position(absolute, -3% -3% null null);
 		@include size(50%, 100%);
-		background-image: url('../assets/branding/logo-primary.png');
+		background-image: url("../img/branding/logo-primary.png");
 		background-repeat: no-repeat;
 		background-size: contain;
-		content: '';
+		content: "";
 		display: block;
-		opacity: .3;
+		opacity: 0.3;
 	}
 
 	&__wrap {
@@ -34,7 +34,7 @@
 		width: 110px;
 
 		h3 {
-			color: rgba($color-black, .20);
+			color: rgba($color-black, 0.2);
 			font-size: 72px;
 			font-weight: 900;
 			line-height: 72px;
@@ -50,5 +50,4 @@
 	&__copy {
 		@include span-columns(4 of 6);
 	}
-
 }

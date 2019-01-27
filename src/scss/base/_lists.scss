@@ -30,7 +30,7 @@ dd {
 		&::before {
 			@include position(absolute, .75em null null -2.25em);
 			background: $color-tiffany;
-			content: '';
+			content: "";
 			display: block;
 			height: 2px;
 			width: 1.5em;
@@ -59,10 +59,10 @@ dd {
 		&::before {
 			@include size(1.25rem);
 			@include position(absolute, 14px null null 0);
-			background-image: url('../assets/GameDayGolfClassic/checkmark.png');
+			background-image: url("../img/gameday-classic/checkmark.png");
 			background-size: contain;
 			border-radius: $base-border-radius;
-			content: '';
+			content: "";
 			display: block;
 			transform: translateY(-50%);
 			z-index: 2;

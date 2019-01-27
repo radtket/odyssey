@@ -8,17 +8,20 @@
 		@include position(absolute, 0 null null 0);
 		@include size(100%);
 		background: rgba($color-white, .1);
-		content: '';
+		content: "";
 	}
 
 	&__video {
-		@include position(absolute, 50% null null 50%);
+		@include position(fixed, 0 null null 0);
 		height: auto;
 		min-height: 100%;
 		min-width: 100%;
-		transform: translate(-50%, -50%);
 		width: auto;
 		z-index: -100;
+
+		&.absolute {
+			position: absolute;
+		}
 	}
 
 	&__content {
@@ -51,7 +54,7 @@
 		background: $color-black;
 		padding: $base-spacing ($base-spacing * 2);
 
-		> svg {
+		>svg {
 			display: inline-block;
 			margin: 0 0 $base-spacing;
 			width: 100%;
@@ -103,5 +106,3 @@
 		min-height: 300px;
 	}
 }
-
-

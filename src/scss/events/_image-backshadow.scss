@@ -19,7 +19,7 @@
 			@include position(absolute, 40px -40px null null);
 			@include size(100%);
 			background: $color-tiffany;
-			content: '';
+			content: "";
 			z-index: 1;
 		}
 

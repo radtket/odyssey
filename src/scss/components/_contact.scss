@@ -26,12 +26,12 @@
 	&::before {
 		@include position(absolute, null null -50% -25%);
 		@include size(125%, 100%);
-		background-image: url('../assets/branding/logo-primary.png');
+		background-image: url("../img/branding/logo-primary.png");
 		background-repeat: no-repeat;
 		background-size: contain;
-		content: '';
+		content: "";
 		display: block;
-		opacity: .3;
+		opacity: 0.3;
 	}
 }
 
@@ -65,8 +65,8 @@
 	}
 }
 
-input[type=text],
-input[type=email] {
+input[type="text"],
+input[type="email"] {
 	// @include margin(10px null);
 	@include padding(0 0 0 10px);
 	@include size(100%, 40px);
@@ -93,7 +93,7 @@ input[type=email] {
 			margin-right: 0;
 		}
 
-		> * {
+		>* {
 			vertical-align: middle;
 		}
 

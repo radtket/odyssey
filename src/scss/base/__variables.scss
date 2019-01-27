@@ -1,0 +1,56 @@
+// Typography
+$base-font-family: "Roboto";
+$heading-font-family: $base-font-family;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: 1.5rem;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+$dark-gray: #333333;
+$medium-gray: #999999;
+$light-gray-alt: #666666;
+$light-gray: #dddddd;
+
+$color-white: #fafafa;
+
+// Themeo Colors
+$color-red-l: #ff6f60;
+$color-red: #e53935;
+$color-red-d: #ab000d;
+
+$color-black-l: #484848;
+$color-black: #212121;
+$color-black-d: #000000;
+
+// Event Colors
+$color-tiffany-l: #91ffe6;
+$color-tiffany: #5bd8b4;
+$color-tiffany-d: #17a684;
+
+// Font Colors
+$base-font-color: $color-black-l;
+$action-color: $color-red;
+
+// Border
+$base-border-color: $light-gray;
+$base-border: 1px solid $base-border-color;
+
+// Background Colors
+$viewport-background-color: $color-white;
+
+// Focus
+$focus-outline-color: transparentize($action-color, 0.4);
+$focus-outline-width: 3px;
+$focus-outline: $focus-outline-width solid $focus-outline-color;
+$focus-outline-offset: 2px;
+
+// Animations
+$base-duration: 0.15s;
+$base-timing: ease;
