@@ -1,8 +1,9 @@
-# Odyssey
+**Odyssey Entertainment Marketing Webpage**  
+A professional site showcasing Odyssey's expertise in sports and entertainment marketing. It highlights services like brand strategy, digital creativity, and event development, emphasizing client collaboration and delivering high-energy, memorable experiences. The site also reflects the company's values of passion, performance, and partnership, offering solutions for branding, events, and digital marketing.
 
-A client website for Market with Odyssey
+**GitHub Repository:** [radtket/odyssey](https://github.com/radtket/odyssey)  
+**Live Demo:** [Odyssey Entertainment Marketing](https://radtket.github.io/odyssey/)
 
-**Live demo:** [https://radtket.github.io/odyssey/](https://radtket.github.io/odyssey/)
 
 ## Getting started
 
